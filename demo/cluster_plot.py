@@ -86,7 +86,7 @@ def main(args: List[str]) -> None:
     metrics_df.to_csv(metrics_csv, index=False)
 
     # Plot some statistics (no elbow: avoid inertia vs k)
-    if "silhouette_score" in metrics_df.columns:
+    if "silhouette_score" in metrics_df.columns: #change string to silhouette
         plt.figure()
         plt.bar(metrics_df["k"], metrics_df["silhouette_score"])
         plt.xlabel("k")
