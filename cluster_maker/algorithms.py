@@ -39,7 +39,7 @@ def assign_clusters(X: np.ndarray, centroids: np.ndarray) -> np.ndarray:
     # centroids: (k, n_features)
     # Broadcast to compute distances
     diff = X[:, np.newaxis, :] - centroids[np.newaxis, :, :]
-    distances = np.linalg.norm(diff, axis=1)  # (n_samples, k)
+    distances = np.linalg.norm(diff, axis=1)  # (n_samples, k) # use axis=2 for each point to centroid pair
     labels = np.argmin(distances, axis=1)       # argmax changed to argmin
     return labels
 
