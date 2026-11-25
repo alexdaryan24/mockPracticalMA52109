@@ -59,7 +59,7 @@ def main(args: List[str]) -> None:
             input_path=input_path,
             feature_cols=feature_cols,
             algorithm="kmeans",
-            k = min(k, 3),
+            k = min(k, 3), # this causes k=4,k=5 to produce the same result as k=3 as evident in the terminal
             standardise=True,
             output_path=os.path.join(OUTPUT_DIR, f"{base}_clustered_k{k}.csv"),
             random_state=42,
