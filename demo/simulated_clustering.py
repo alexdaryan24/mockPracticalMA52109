@@ -1,6 +1,6 @@
 
 
-#Simulated clustering demo ### AI ###
+#Simulated clustering demo ### AI assisted ###
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -32,7 +32,7 @@ print(scores_df.to_string(index=False))
 scores_df.to_csv("simulated_metrics.csv", index=False)
 
 # Choose k based on the printed metrics;
-chosen_k = 6
+chosen_k = 7
 final = run_clustering(
     input_path=input_path,
     feature_cols=features,
