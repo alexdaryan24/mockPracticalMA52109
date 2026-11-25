@@ -23,11 +23,11 @@ def init_centroids(
     if k <= 0:
         raise ValueError("k must be a positive integer.")
     n_samples = X.shape[0]
-    if k > n_samples:      # change X.shape[1] to n_samples, error evident by viewing next line
+    if k > n_samples:      #AI change X.shape[1] to n_samples, error evident by viewing next line
         raise ValueError("k cannot be larger than the number of samples.")
 
     rng = np.random.RandomState(random_state)
-    indices = rng.choice(n_samples, size=k + 1, replace=False)
+    indices = rng.choice(n_samples, size=k, replace=False)  #AI change k+1 to k 
     return X[indices]
 
 
